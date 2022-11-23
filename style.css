@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mainContainer{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+.mainFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+
+}
+.theCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+.theCard.active{
+    transform: rotateY(180deg);
+}
+.cardOn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: #333;
+}
+.cardOn img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    opacity: 0.3;
+}
+.cardOf{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: #333;
+    transform: rotateY(180deg);
+}
+.img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 10px;
+}
+.topImg{
+    border-radius: 10px;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+/* View qismi */
+
+.view {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.835);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+}
+.view.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: .3s ease;
+}
+.view__close {
+    color: white;
+    font-size: 32px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    outline: none;
+}
+.view__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.view__text h3{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 22px;
+}
+.view__btn{
+    margin-top: 10px;
+    font-family: serif;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+}
+.urinishlar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: green;
+    font-size: 22px;
+}
+.view__top-text.active{
+    color: green;
+    font-size: 31px;
+}
+.view__top-text.active2{
+    color: red;
+    font-size: 31px;
+}
+.trueFalse{
+    transform: scale(0);
+}
